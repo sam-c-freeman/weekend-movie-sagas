@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 
 
+
 function DetailsPage (){
   //back button?  
     
