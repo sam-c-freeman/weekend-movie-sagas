@@ -29,7 +29,7 @@ function MovieList() {
     }, []);
 
     const handleDetailsClick = (id) => {
-        history.push(`/${id}`)
+        history.push(`/movie/${id}`)
     }
 
     return (

@@ -21,7 +21,6 @@ function DetailsPage (){
     const movie = useSelector(store => store.oneMovie)
     
     useEffect(() => {
-        
         dispatch ({
             type: 'FETCH_MOVIE_DETAILS',
             payload: movieId
@@ -41,17 +40,10 @@ function DetailsPage (){
   }
     
 
-  //why is button in header?
+
     return(
         <>
-        {/* <Button 
-        onClick={backToHome}
-        sx={{mb: 2}}
-        color="error" variant="outlined" startIcon={<HomeIcon />}>
-            Home
-        </Button> */}
-            {/* <button onClick={backToHome}>Home</button> */}
-            {/* <Box sx={{ mx: "auto" }}> */}
+      
                 <Card style={{maxWidth:750, margin:"0 auto", padding:"20px 20px"}}>
                     <CardContent>
                       <Typography variant="h2" gutterBottom>
