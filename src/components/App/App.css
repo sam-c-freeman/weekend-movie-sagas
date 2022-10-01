@@ -13,11 +13,15 @@
 
 .App-title {
   font-size: 1.5em;
+  
  
 }
 
 .header{
   color: white;
+  font-size: 3.0em;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
 .App-intro {
@@ -29,6 +33,7 @@ img{
   width: 185px;
 
 }
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

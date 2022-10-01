@@ -1,4 +1,8 @@
-.movies {
+/* .movies {
     display : flex;
     flex-wrap: wrap;
+} */
+
+.movieList{
+    background-color: black;
 }

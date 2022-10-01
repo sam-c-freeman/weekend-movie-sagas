@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 
+
+
 function MovieList() {
 
     const Item = styled(Paper)(({ theme }) => ({
@@ -30,10 +32,10 @@ function MovieList() {
     }
 
     return (
-        <Box>
+        <Box className="movieList">
             <h1>MovieList</h1>
             {/* <section className="movies"> */}
-            <Paper elevation={7} color="secondary">
+            {/* <Paper elevation={7} color="secondary"> */}
             <Grid container spacing={2}>
                 {movies.map(movie => (
                         <Grid key={movie.id} item xs={12} sm={4} md={3}>
@@ -48,7 +50,7 @@ function MovieList() {
                         </Grid>
                 ))}
                 </Grid>
-            </Paper>
+            {/* </Paper> */}
             {/* </section> */}
         </Box>
 
