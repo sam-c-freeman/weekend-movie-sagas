@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 // import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 
 
@@ -33,25 +34,23 @@ function MovieList() {
 
     return (
         <Box className="movieList">
-            <h1>MovieList</h1>
-            {/* <section className="movies"> */}
-            {/* <Paper elevation={7} color="secondary"> */}
+            {/* <h1 className="movieHeader">Featured Films</h1> */}
+  
             <Grid container spacing={2}>
                 {movies.map(movie => (
                         <Grid key={movie.id} item xs={12} sm={4} md={3}>
-                        {/* <Card key={movie.id}> */}
+                       
                             <Item  sx={{ Width: 100, Height: 100}}>
                                 <div >
                                     <h3>{movie.title}</h3>
                                     <img src={movie.poster} alt={movie.title} onClick={() => handleDetailsClick(movie.id)}/>
                                 </div>
-                        {/* </Card> */}
+                 
                             </Item> 
                         </Grid>
                 ))}
                 </Grid>
-            {/* </Paper> */}
-            {/* </section> */}
+           
         </Box>
 
     );
