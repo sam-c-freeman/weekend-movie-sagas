@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background-color: black;
+  /* background-color: black; */
   background-image: url("../../../public/images/cosmic.jpg");
   background-size: contain;
 }
 
 
 .App-header {
-  background-color: #222;
+  /* background-color: #222; */
   height: 150px;
   padding: 20px;
   color: white;
@@ -24,9 +24,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
 
-header{
-  background-color: black;
-}
 
 
 

@@ -26,7 +26,15 @@ function DetailsPage (){
             type: 'FETCH_MOVIE_DETAILS',
             payload: movieId
         })
-    }, [movieId])
+        
+        return () => {
+            dispatch({
+              type: 'CLEAR_MOVIE_DETAILS'
+            })
+          }
+        }, [movieId])
+
+
     
     const backToHome = () =>{
         history.push('/')
@@ -53,7 +61,7 @@ function DetailsPage (){
                         <Typography variant="body1" gutterBottom mt={5}>
                                 {movie.description}
                         </Typography>
-                        <Typography variant="h5" gutterBottom mt={5}>
+                        <Typography variant="h4" gutterBottom mt={5}>
                                 Genre:
                         </Typography>
 
@@ -75,8 +83,8 @@ function DetailsPage (){
                                  {movie.genres}
                         </Typography> */}
                         <Button onClick={backToHome}
-                        color="error" 
-                        sx={{m: 4}}
+                        // color="error" 
+                        sx={{mt: 4, color: '#026f6a', borderColor: '#026f6a'}}
                         variant="outlined" 
                         startIcon={<HomeIcon />}>Home</Button>
                     </CardContent>
