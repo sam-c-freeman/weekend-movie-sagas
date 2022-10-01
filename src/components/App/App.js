@@ -2,12 +2,14 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import MovieList from '../MovieList/MovieList'
 import DetailsPage from '../DetailsPage/DetailsPage';
+import Header from '../Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="header">The Movies Saga!</h1>
-      <Router>        
+     
+      <Router>  
+      <Header/>      
         <Route path="/" exact>
           <MovieList />
         </Route>
