@@ -17,14 +17,14 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  // console.log('In get route for one movie');
+  console.log('In get route for one movie');
   const sqlText = `
   SELECT movies.title, movies.poster, movies.description, ARRAY_AGG(genres.name) genres FROM movies
     JOIN movies_genres
     ON movies.id = movies_genres.movie_id
     JOIN genres
     ON movies_genres.genre_id = genres.id
-    WHERE movies.id=1
+    WHERE movies.id=$1
     GROUP BY movies.title, movies.poster, movies.description;
       `
   const sqlValues=[req.params.id]
