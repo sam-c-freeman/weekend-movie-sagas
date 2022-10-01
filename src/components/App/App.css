@@ -24,6 +24,12 @@
   font-size: large;
 }
 
+img{
+  height: 274px;
+  width: 185px;
+
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   console.log('In get route for one movie');
   const sqlText = `
-  SELECT movies.title, movies.poster, movies.description, ARRAY_AGG(genres.name) genres FROM movies
+  SELECT movies.title, movies.poster, movies.description, ARRAY_AGG(genres.name || ' ' ) genres FROM movies
     JOIN movies_genres
     ON movies.id = movies_genres.movie_id
     JOIN genres
