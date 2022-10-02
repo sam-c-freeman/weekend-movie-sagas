@@ -21,7 +21,6 @@ function DetailsPage (){
     const movie = useSelector(store => store.oneMovie)
     
     useEffect(() => {
-        
         dispatch ({
             type: 'FETCH_MOVIE_DETAILS',
             payload: movieId
@@ -41,27 +40,26 @@ function DetailsPage (){
   }
     
 
-  //why is button in header?
+
     return(
         <>
-        {/* <Button 
-        onClick={backToHome}
-        sx={{mb: 2}}
-        color="error" variant="outlined" startIcon={<HomeIcon />}>
-            Home
-        </Button> */}
-            {/* <button onClick={backToHome}>Home</button> */}
-            {/* <Box sx={{ mx: "auto" }}> */}
-                <Card style={{maxWidth:750, margin:"0 auto", padding:"20px 20px"}}>
+        <Box mb={2}>
+          <Box sx={{
+            border: 2 , 
+            borderColor: "#00fff2",
+            borderRadius: 1, 
+            maxWidth:700, 
+            margin:"0 auto"}}>
+                <Card style={{maxWidth:700,  padding:"20px 20px"}}>
                     <CardContent>
-                      <Typography variant="h2" gutterBottom>
+                      <Typography variant="h2" gutterBottom className="detailsText">
                             {movie.title}
                         </Typography>
                             <img src={movie.poster}></img>
-                        <Typography variant="body1" gutterBottom mt={5}>
+                        <Typography variant="body1" gutterBottom mt={5} className="detailsText">
                                 {movie.description}
                         </Typography>
-                        <Typography variant="h4" gutterBottom mt={5}>
+                        <Typography variant="h4" gutterBottom mt={5} className="detailsText">
                                 Genre:
                         </Typography>
 
@@ -70,7 +68,7 @@ function DetailsPage (){
                         <div>
                         {movie.genres.map((genre, index) => {
                             return (
-                            <Typography variant="body1" key={index} mt={2}>
+                            <Typography variant="body1" key={index} mt={2} className="detailsText">
                                 {genre}
                             </Typography>
                             );
@@ -89,7 +87,8 @@ function DetailsPage (){
                         startIcon={<HomeIcon />}>Home</Button>
                     </CardContent>
                 </Card>
-            {/* </Box> */}
+            </Box>
+            </Box>
         </>
     )
 }

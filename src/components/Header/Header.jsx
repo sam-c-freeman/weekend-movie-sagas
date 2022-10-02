@@ -11,6 +11,10 @@ function Header () {
         history.push('/')
   }
 
+  const addAMovie = () =>{
+    history.push('/form')
+}
+
   
     
     return(
@@ -20,13 +24,11 @@ function Header () {
         
         <Button
                         onClick={backToHome}
-                       
                         sx={{m: 3, color: '#c7f5f3', borderColor: '#00fff2' }}
                         variant="outlined" 
                         startIcon={<HomeIcon />}>Go Home</Button>
         <Button
-                       
-                   
+                        onClick={addAMovie}
                         sx={{m: 3, color: '#c7f5f3', borderColor: '#00fff2' }}
                         variant="outlined" 
                         startIcon={<AddIcon />}>Add Movie</Button>
