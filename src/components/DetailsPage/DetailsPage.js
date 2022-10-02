@@ -43,7 +43,7 @@ function DetailsPage (){
 
     return(
         <>
-      
+          <Box m={2}>
                 <Card style={{maxWidth:750, margin:"0 auto", padding:"20px 20px"}}>
                     <CardContent>
                       <Typography variant="h2" gutterBottom>
@@ -81,7 +81,7 @@ function DetailsPage (){
                         startIcon={<HomeIcon />}>Home</Button>
                     </CardContent>
                 </Card>
-            {/* </Box> */}
+            </Box>
         </>
     )
 }

@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 
 function Form (){
     return(
+    <Box mb={2}>
     <Box  className="form" sx={{  
                             border: 2 , 
                             borderColor: "#00fff2",
@@ -52,6 +53,7 @@ function Form (){
                         sx={{m: 2, color: '#026f6a', borderColor: '#026f6a'}}
                         variant="outlined" 
                         startIcon={<AddIcon />}>Add Movie</Button>
+    </Box>
     </Box>
      
     )

@@ -33,7 +33,7 @@ function MovieList() {
     }
 
     return (
-        <Box className="movieList">
+        <Box className="movieList" m={2}>
             {/* <h1 className="movieHeader">Featured Films</h1> */}
   
             <Grid container spacing={2}>
