@@ -36,6 +36,15 @@ function Form (){
         dispatch({ type: 'ADD_MOVIE', payload: newMovie });
         setMovie({title: '', poster: '', description: '', genre: ''});
     }
+
+    const checkEmpty = (event) => {
+        if(newMovie.tite === '' || newMovie.poster === '' || newMovie.description === '' || newMovie.genre === ''){
+            alert('Please enter all values!')
+        }
+        else{
+            addNewMovie(event);
+        }
+    }
     
     return(
     <Box mb={2}>
@@ -99,7 +108,7 @@ function Form (){
             </Stack>
         </form>
         <Button
-                        onClick={addNewMovie}
+                        onClick={checkEmpty}
                         sx={{m: 2, color: '#026f6a', borderColor: '#026f6a'}}
                         variant="outlined" 
                         startIcon={<AddIcon />}>Add Movie</Button>
