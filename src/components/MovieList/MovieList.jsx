@@ -38,9 +38,17 @@ function MovieList() {
   
             <Grid container spacing={2}>
                 {movies.map(movie => (
-                        <Grid key={movie.id} item xs={12} sm={4} md={3}>
+                        <Grid key={movie.id} item xs={12} sm={4} md={3}
+                        >
                        
-                            <Item  sx={{ Width: 100, Height: 100}}>
+                            <Item  
+                            sx={{
+                                Width: 100, 
+                                Height: 100,
+                                border: 2 , 
+                                borderColor: "#00fff2",
+                                borderRadius: 1, 
+                                margin:"0 auto"}}>
                                 <div >
                                     <h3>{movie.title}</h3>
                                     <img src={movie.poster} alt={movie.title} onClick={() => handleDetailsClick(movie.id)}/>

@@ -43,8 +43,14 @@ function DetailsPage (){
 
     return(
         <>
-          <Box m={2}>
-                <Card style={{maxWidth:750, margin:"0 auto", padding:"20px 20px"}}>
+        <Box mb={2}>
+          <Box sx={{
+            border: 2 , 
+            borderColor: "#00fff2",
+            borderRadius: 1, 
+            maxWidth:700, 
+            margin:"0 auto"}}>
+                <Card style={{maxWidth:700,  padding:"20px 20px"}}>
                     <CardContent>
                       <Typography variant="h2" gutterBottom>
                             {movie.title}
@@ -81,6 +87,7 @@ function DetailsPage (){
                         startIcon={<HomeIcon />}>Home</Button>
                     </CardContent>
                 </Card>
+            </Box>
             </Box>
         </>
     )
