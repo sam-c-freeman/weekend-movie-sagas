@@ -52,14 +52,14 @@ function DetailsPage (){
             margin:"0 auto"}}>
                 <Card style={{maxWidth:700,  padding:"20px 20px"}}>
                     <CardContent>
-                      <Typography variant="h2" gutterBottom>
+                      <Typography variant="h2" gutterBottom className="detailsText">
                             {movie.title}
                         </Typography>
                             <img src={movie.poster}></img>
-                        <Typography variant="body1" gutterBottom mt={5}>
+                        <Typography variant="body1" gutterBottom mt={5} className="detailsText">
                                 {movie.description}
                         </Typography>
-                        <Typography variant="h4" gutterBottom mt={5}>
+                        <Typography variant="h4" gutterBottom mt={5} className="detailsText">
                                 Genre:
                         </Typography>
 
@@ -68,7 +68,7 @@ function DetailsPage (){
                         <div>
                         {movie.genres.map((genre, index) => {
                             return (
-                            <Typography variant="body1" key={index} mt={2}>
+                            <Typography variant="body1" key={index} mt={2} className="detailsText">
                                 {genre}
                             </Typography>
                             );

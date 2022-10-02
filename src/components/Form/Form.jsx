@@ -24,7 +24,7 @@ function Form (){
                             margin:"0 auto",
                              }}>
         
-        <Typography variant="h4" gutterBottom mt={2}>
+        <Typography variant="h4" gutterBottom mt={2} className="formTitle">
                                 Add a Movie
         </Typography>
         <Stack spacing={2} m={2}>
