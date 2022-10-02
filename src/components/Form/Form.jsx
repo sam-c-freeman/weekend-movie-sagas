@@ -3,24 +3,57 @@ import {useParams} from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import '../App/App.css';
+import './Form.css';
 
 import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import HomeIcon from '@mui/icons-material/Home';
+import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import AddIcon from '@mui/icons-material/Add';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 
 function Form (){
     return(
-       <Box sx={{ height: '100%' }}>
-        <Card style={{maxWidth:750, margin:"0 auto", padding:"20px 20px"}}>
-                <p>I am a form</p>
-                
-
-            </Card>
-        </Box>
+    <Box  className="form" sx={{  
+                            border: 2 , 
+                            borderColor: "#00fff2",
+                            borderRadius: 1, 
+                            maxWidth:600, 
+                            margin:"0 auto",
+                             }}>
+        
+        <Typography variant="h4" gutterBottom mt={2}>
+                                Add a Movie
+        </Typography>
+        <Stack spacing={2} m={2}>
+            <TextField
+            id="outlined-helperText"
+            placeholder="Movie Title"
+            />
+            <TextField
+            id="outlined-helperText"
+            placeholder="Movie Poster URL"
+            />
+             <TextField
+            id="outlined-helperText"
+            multiline
+            rows={3}
+            placeholder="Description"
+            />
+            <TextField
+            id="outlined-helperText"
+            placeholder="Genre"
+            />
+        
+        </Stack>
+        <Button
+                        // onClick={addAMovie}
+                        sx={{m: 2, color: '#026f6a', borderColor: '#026f6a'}}
+                        variant="outlined" 
+                        startIcon={<AddIcon />}>Add Movie</Button>
+    </Box>
+     
     )
 }
 
