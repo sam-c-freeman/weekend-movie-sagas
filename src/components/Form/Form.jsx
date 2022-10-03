@@ -38,7 +38,7 @@ function Form (){
     }
 
     const checkEmpty = (event) => {
-        if(newMovie.tite === '' || newMovie.poster === '' || newMovie.description === '' || newMovie.genre === ''){
+        if(newMovie.title === '' || newMovie.poster === '' || newMovie.description === '' || newMovie.genre === ''){
             alert('Please enter all values!')
         }
         else{
